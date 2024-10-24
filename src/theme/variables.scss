@@ -1,0 +1,79 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+:root {
+	
+	--ion-color-primary: #ccabd8;
+	--ion-color-primary-rgb: 204,171,216;
+	--ion-color-primary-contrast: #f9f1f1;
+	--ion-color-primary-contrast-rgb: 0,0,0;
+	--ion-color-primary-shade: #b496be;
+	--ion-color-primary-tint: #d1b3dc;
+
+	--ion-color-secondary: #fa897b;
+	--ion-color-secondary-rgb: 250,137,123;
+	--ion-color-secondary-contrast: #f9f6f6;
+	--ion-color-secondary-contrast-rgb: 0,0,0;
+	--ion-color-secondary-shade: #dc796c;
+	--ion-color-secondary-tint: #fb9588;
+
+	
+
+	--ion-color-tertiary: #d0e6a5;
+	--ion-color-tertiary-rgb: 208,230,165;
+	--ion-color-tertiary-contrast: #f9f1f1;
+	--ion-color-tertiary-contrast-rgb: 0,0,0;
+	--ion-color-tertiary-shade: #b7ca91;
+	--ion-color-tertiary-tint: #d5e9ae;
+	
+	--ion-color-success: #86e3ce;
+	--ion-color-success-rgb: 134,227,206;
+	--ion-color-success-contrast: #f9f1f1;
+	--ion-color-success-contrast-rgb: 0,0,0;
+	--ion-color-success-shade: #76c8b5;
+	--ion-color-success-tint: #92e6d3;
+
+
+	--ion-color-warning: #ffdd94;
+	--ion-color-warning-rgb: 255,221,148;
+	--ion-color-warning-contrast: #f9f1f1;
+	--ion-color-warning-contrast-rgb: 0,0,0;
+	--ion-color-warning-shade: #e0c282;
+	--ion-color-warning-tint: #ffe09f;
+
+	--ion-color-danger: #ea3446;
+	--ion-color-danger-rgb: 234,52,70;
+	--ion-color-danger-contrast: #f9f1f1;
+	--ion-color-danger-contrast-rgb: 0,0,0;
+	--ion-color-danger-shade: #ce2e3e;
+	--ion-color-danger-tint: #ec4859;
+
+	--ion-color-light: #f5f5f5;
+	--ion-color-light-rgb: 245,245,245;
+	--ion-color-light-contrast: #f9f1f1;
+	--ion-color-light-contrast-rgb: 0,0,0;
+	--ion-color-light-shade: #d8d8d8;
+	--ion-color-light-tint: #f6f6f6;
+
+	--ion-color-medium: #d4d4d4;
+	--ion-color-medium-rgb: 212,212,212;
+	--ion-color-medium-contrast: #f9f1f1;
+	--ion-color-medium-contrast-rgb: 0,0,0;
+	--ion-color-medium-shade: #bbbbbb;
+	--ion-color-medium-tint: #d8d8d8;
+
+	--ion-color-dark: #66a394;
+	--ion-color-dark-rgb: 102,163,148;
+	--ion-color-dark-contrast: #f9f1f1;
+	--ion-color-dark-contrast-rgb: 0,0,0;
+	--ion-color-dark-shade: #5a8f82;
+	--ion-color-dark-tint: #75ac9f;
+
+	--ion-toolbar-color: #fffdfa;
+	--ion-toolbar-background:var(--ion-color-secondary);
+	--ion-tab-bar-background:var(--ion-color-warning);
+	--ion-tab-bar-color: #fffdfa;
+	--ion-background-color:#fffdfa;
+	
+	
+}

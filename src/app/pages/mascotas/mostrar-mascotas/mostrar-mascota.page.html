@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>{{ mascota?.nombre }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+    <ion-card *ngIf="mascota">
+      <ion-card-header>
+        <ion-card-title>{{ mascota.nombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Raza:</strong> {{ mascota.raza }}</p>
+        <p><strong>Edad:</strong> {{ mascota.edad }} años</p>
+        <p><strong>Color:</strong> {{ mascota.color }}</p>
+        <p><strong>Dueño:</strong> {{ mascota.dueno }}</p>
+        <p><strong>Teléfono:</strong> {{ mascota.telefono }}</p>
+        <p><strong>Dirección:</strong> {{ mascota.direccion }}</p>
+        <ion-button (click)="mostrarUbicacion()">
+          Mostrar ubicación en Google Maps
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  

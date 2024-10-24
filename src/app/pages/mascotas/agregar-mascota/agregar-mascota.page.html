@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Agregar Mascota</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form (ngSubmit)="agregarMascota()">
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="mascota.nombre" name="nombre" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Tipo</ion-label>
+        <ion-input [(ngModel)]="mascota.tipo" name="tipo" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Raza</ion-label>
+        <ion-input [(ngModel)]="mascota.raza" name="raza"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Color</ion-label>
+        <ion-input [(ngModel)]="mascota.color" name="color"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Tamaño</ion-label>
+        <ion-input [(ngModel)]="mascota.tamano" name="tamano"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Edad</ion-label>
+        <ion-input [(ngModel)]="mascota.edad" name="edad" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ubicación del dueño</ion-label>
+        <ion-button (click)="seleccionarUbicacion()">Seleccionar Ubicación en el Mapa</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label>¿Está vacunado?</ion-label>
+        <ion-toggle [(ngModel)]="mascota.vacunado" name="vacunado"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Comentarios</ion-label>
+        <ion-textarea [(ngModel)]="mascota.comentarios" name="comentarios"></ion-textarea>
+      </ion-item>
+      <ion-button expand="block" type="submit">Agregar Mascota</ion-button>
+    </form>
+  
+    <!-- Bloque para mostrar el QR después de generarlo -->
+    <div *ngIf="qrCodeImage" class="qr-code-container">
+      <h2>Código QR de la Mascota:</h2>
+      <img [src]="qrCodeImage" alt="QR Code" />
+    </div>
+  </ion-content>
+  

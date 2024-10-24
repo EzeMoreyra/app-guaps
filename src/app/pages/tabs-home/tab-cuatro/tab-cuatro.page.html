@@ -1,0 +1,93 @@
+
+<div class="ion-page" id="main-content">
+  <ion-header [translucent]="true">
+    <ion-toolbar> 
+      <ion-buttons slot="end">
+        <ion-button shape="round" (click)="closeSessionUser()">
+          <ion-icon slot="icon-only" name="log-out-outline" ></ion-icon>
+        </ion-button> 
+      </ion-buttons>
+      <ion-title>Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <div class="ion-padding">
+      <div>
+        <ion-button shape="round" id="open-modal" color="warning" (click)="openModal()">
+          <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+        </ion-button>     
+      </div>
+      <div class="ion-padding">
+        <ion-thumbnail >
+            <img *ngIf="" alt="foto perfil"  src="../../../assets/images/logo-mascotas-07.png" />
+            <img alt="foto perfil" [src]="photoUrl || '../../../assets/images/logo-mascotas-07.png'" *ngIf="photoUrl"  />
+        </ion-thumbnail>
+        <ion-button shape="round" (click)="openCamara()">
+          <ion-icon slot="icon-only" name="camera-outline"></ion-icon>
+        </ion-button> 
+      </div>
+    <div class="ion-padding">
+      <ion-title color="secondary">{{ 
+      ajustesForm.get('nombre')?.value + ' ' + ajustesForm.get('apellido')?.value
+       }}</ion-title>
+    </div>
+    </div>
+    <div class="ion-padding">
+      <ion-title color="primary">Mascotas</ion-title>
+    </div>
+    <div class="ion-padding">
+      <ion-list class="ion-padding">
+        <ion-item>
+          <ion-avatar slot="start">
+            <ion-img src="../../../assets/images/logo-mascotas-08.png"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <ion-title color="primary">Colitas</ion-title>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img alt="foto perfil" src=" ../../../assets/images/logo-mascotas-09.png" />
+          </ion-avatar>
+          <ion-label>
+            <ion-title color="primary">Thor</ion-title>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-content class="ion-padding">
+      <ion-modal [keepContentsMounted]="true" trigger="open-modal" #modal>
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="end">
+                <ion-button  (click)="modal.dismiss()">
+                  <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+              <ion-title>Editar perfil</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <form  [formGroup]="ajustesForm" (ngSubmit)="onSubmit()"  class="ion-padding">
+              <ion-list>
+                <ion-item>
+                  <ion-input formControlName="nombre" label="Nombre"  position="floating"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input formControlName="apellido" label="Apellido"  position="floating"></ion-input>
+                </ion-item>
+              </ion-list>
+              <div class="ion-padding">
+                <div class="ion-padding">
+                  <ion-button   color="tertiary" shape="round" strong="true" size="default" (click)="editPassword()" expand="block" fill="outline">Cambiar Contraseña</ion-button>
+                </div>
+                <div class="ion-padding">
+                  <ion-button  color="tertiary"  type="submit" shape="round" strong="true" size="default" (click)="modal.dismiss()" expand="block">Guardar</ion-button>
+                </div>
+              </div>
+            </form>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+  </ion-content>
+</div>

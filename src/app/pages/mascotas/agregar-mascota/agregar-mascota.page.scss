@@ -1,0 +1,27 @@
+ion-content {
+    --padding-top: 20px;
+  }
+  
+  .formulario-agregar-mascota {
+    padding: 20px;
+  }
+  
+  ion-item {
+    margin-bottom: 20px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+  }
+  .qr-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  
+    img {
+      width: 200px; // Ajusta el tamaño según tus preferencias
+      height: auto;
+    }
+  }
+    

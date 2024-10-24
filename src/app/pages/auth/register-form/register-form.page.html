@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="start" icon="arrow-back-circle-outline" color="secundary"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  class="ion-padding">
+  <div class="ion-padding ion-align-items-center">
+    <form [formGroup]= "registerForm" (ngSubmit)="onSubmit()">
+      <ion-img
+      src="../../assets/images/logo-mascotas-11.png"
+      alt="Mascotas"
+    ></ion-img>
+      <ion-input
+      formControlName="nombre"
+      label="Nombre" 
+      labelPlacement="floating" 
+      placeholder="Dario"
+      helperText="Ingrese un Nombre"
+      errorText="El Nombre no es válido"
+      ></ion-input>
+  
+      <ion-input
+      formControlName="apellido"
+      label="Apellido" 
+      labelPlacement="floating" 
+      placeholder="Peréz"
+      helperText="Ingrese un Apellido"
+      errorText="El Apellido no es válido"
+      ></ion-input>
+  
+      <ion-input
+      formControlName="email"
+      label="Email" 
+      labelPlacement="floating" 
+      placeholder="perez@gmail.com"
+      helperText="Ingrese un Email"
+      errorText="El email no es válido"
+      ></ion-input>
+  
+      <ion-input
+      label="Contraseña" 
+      formControlName="password"
+      labelPlacement="floating" 
+      helperText="Ingrese una contraseña"
+      errorText="La contraseña no es válida"
+      >
+      <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+  
+      <ion-input
+      label="Confirmar contraseña" 
+      formControlName="rePassword"
+      labelPlacement="floating" 
+      helperText="Confirme contraseña"
+      errorText="La contraseña no es válida"
+      >
+      <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+      <div class="ion-padding">
+        <ion-button [disabled]="!registerForm.valid" color="tertiary" shape="round" size="default" strong="true" expand="block" type="submit">Guardar</ion-button>
+      </div>
+     </form>
+  </div>
+ 

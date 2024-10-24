@@ -1,0 +1,3 @@
+Host gitlab.com
+        AssKeysToAgent yes
+        IdentityFile ~/.ssh/gitlab_uner_app

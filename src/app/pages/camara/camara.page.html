@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  icon="arrow-back-circle-outline" color="secundary"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title size="large">Galería</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-card>
+  
+  <img alt="foto perfil" [src]="userPhotoUrl || '../../../assets/images/logo-mascotas-07.png'" />
+  <ion-card-header>
+    <ion-card-title>
+      Foto de Perfil
+    </ion-card-title>
+    </ion-card-header>
+ </ion-card>
+ 
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2" *ngFor="let image of images">
+          <ion-thumbnail (click)="selectImage(image)">
+            <img [src]="image" alt=""/>
+          </ion-thumbnail>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+  
+
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+     <ion-fab-button color="warning">
+      <ion-icon name="add-outline" ></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="openCameraOrGalery(true)">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="openCameraOrGalery(false)">
+        <ion-icon name="image-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

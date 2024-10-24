@@ -1,0 +1,158 @@
+<div class="ion-page" id="libreta">
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Libreta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--<div class="ion-padding">
+  <div>
+    <ion-button shape="round" id="open-modal" color="warning">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="ion-padding">
+    <ion-thumbnail alt="foto perfil" src="../../../assets/images/logo-mascotas-06.png"></ion-thumbnail>
+  
+  </div>-->
+  
+    <!--<ion-button shape="round" id="">
+      <ion-icon slot="icon-only" name="camera-outline"></ion-icon>
+    </ion-button>-->  
+  
+    <!--<div>
+    <ion-title color="secondary" >{{registroLibreta.get('nombre')?.value +' ' + registroLibreta.get('')}}</ion-title>
+  </div>-->
+<ion-content class="ion-padding">
+     <ion-header>
+       <ion-toolbar>
+         <ion-buttons slot="end">
+           <ion-button>
+           <!--<ion-button (click)="modal.dismiss()">-->
+             <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+           </ion-button>
+         </ion-buttons>
+         <ion-title>Libreta de Mascotas</ion-title>
+       </ion-toolbar>
+     </ion-header>
+ 
+     <ion-content class="ion-padding">
+       <form [formGroup]="registroLibreta" (ngOnSubmit)="onSubmit()" class="ion-padding">
+         <ion-list>
+           <ion-item>
+             <ion-input color="secondary" formControlName="nombre" label="Mascota" label-placement="floating"></ion-input>
+           </ion-item>
+           <ion-item>
+             <ion-input formControlName="raza" label="Raza" label-placement="floating"></ion-input>
+           </ion-item>
+           <ion-item>
+             <ion-input formControlName="fechaNacimiento" label="F. Nacimiento" label-placement="floating"></ion-input>
+           </ion-item>
+           <ion-item>
+             <ion-input formControlName="sexo" label="Sexo" label-placement="floating"></ion-input>
+           </ion-item>
+            <ion-item>
+               <ion-input formControlName="tipoMascota" label="Tipo de mascota" label-placement="floating"></ion-input>
+             </ion-item>
+             <ion-item>
+              <ion-input formControlName="enfermedad" label="Enfermedad" label-placement="floating"></ion-input>
+             </ion-item>
+             <ion-item>
+              <ion-input formControlName="vacunas" label="Vacunas" label-placement="floating"></ion-input>
+             </ion-item>
+             <ion-item>
+              <ion-input formControlName="veterinaria" label="Veterinaria" label-placement="floating"></ion-input>
+             </ion-item>
+             <div>
+              <ion-button color="tertiary" type="submit" shape="round" strong="true" size="default" expand="block">Registrar</ion-button>
+             </div>
+             </ion-list>
+            </form>
+          <form [formGroup]="registroLibreta" (ngOnSubmit)="onSubmit()" class="ion-padding">
+          <ion-list>
+            <ion-item>
+              <ion-title>Datos del propietario</ion-title>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="nomPropietario" label="Propietario" label-placement="floating"></ion-input>
+            </ion-item>
+            <ion-item>
+             <ion-input formControlName="apelPropietario" label="Apellido prop." label-placement="floating"></ion-input>
+            </ion-item>
+            <ion-item>
+             <ion-input formControlName="direccion" label="Dirección" label-placement="floating"></ion-input>
+            </ion-item>
+            <ion-item>
+             <ion-input formControlName="telefono" label="Teléfono" label-placement="floating"></ion-input>
+            </ion-item>
+            <ion-item>
+             <ion-input formControlName="celular" label="Tel. Móvil" label-placement="floating"></ion-input>
+            </ion-item>
+            <div>
+             <ion-button color="tertiary" type="submit" shape="round" strong="true" size="default" expand="block">Guardar</ion-button>
+            </div>
+         </ion-list>
+          </form>
+     </ion-content> 
+ </ion-content>
+ 
+<!--<ion-content class="ion-padding">
+ <ion-modal>
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button>
+          <ion-button (click)="modal.dismiss()">
+            <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-title>Libreta de Mascotas</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+      <form [formGroup]="registroLibreta" (ngOnSubmit)="onSubmit()" class="ion-padding">
+        <ion-list>
+          <ion-item>
+            <ion-input color="secondary" formControlName="nombre" label="Mascota" label-placement="floating"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="raza" label="Raza" label-placement="floating"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="fechaNacimiento" label="F. Nacimiento" label-placement="floating"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="sexo" label="Sexo" label-placement="floating"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-item>
+              <ion-input formControlName="tipoMascota" label="Tipo de mascota" label-placement="floating"></ion-input>
+            </ion-item>
+            <ion-input formControlName="nomPropietario" label="Propietario" label-placement="floating"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="apelPropietario" label="Apellido prop." label-placement="floating"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="direccion" label="Dirección" label-placement="floating"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="telefono" label="Teléfono" label-placement="floating"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="celular" label="Tel. Móvil" label-placement="floating"></ion-input>
+          </ion-item>
+          <div>
+            <ion-button color="tertiary" type="submit" shape="round" strong="true" size="default" expand="block">Guardar</ion-button>
+          </div>
+        </ion-list>
+
+      </form>
+    </ion-content>
+  </ng-template>
+ </ion-modal> 
+</ion-content>-->
+
+</div>

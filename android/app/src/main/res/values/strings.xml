@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">app-guaps</string>
+    <string name="title_activity_main">app-guaps</string>
+    <string name="package_name">uner.desmov.appguaps</string>
+    <string name="custom_url_scheme">uner.desmov.appguaps</string>
+</resources>

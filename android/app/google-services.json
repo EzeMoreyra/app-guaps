@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "626201656480",
+    "project_id": "app-guaps",
+    "storage_bucket": "app-guaps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626201656480:android:f56bbc87d293ac1eac5dc5",
+        "android_client_info": {
+          "package_name": "uner.desmov.appguaps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626201656480-q26g9dpp2cmoksnokqi1l6vqelcopeao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdE824KsGGzpeIsu5OhwDkAiIW3Q5L-jI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626201656480-q26g9dpp2cmoksnokqi1l6vqelcopeao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

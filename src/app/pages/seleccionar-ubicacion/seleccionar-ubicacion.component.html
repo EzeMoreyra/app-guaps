@@ -1,0 +1,16 @@
+<div style="height: 500px; width: 100%;">
+  <google-map
+    height="100%"
+    width="100%"
+    [zoom]="zoom"
+    (mapClick)="onMapClick($event)"
+  >
+    <map-marker
+      *ngIf="markerPosition"
+      [position]="markerPosition"
+      [title]="'Ubicación seleccionada'"
+    ></map-marker>
+  </google-map>
+</div>
+<button ion-button (click)="guardarUbicacion()">Guardar Ubicación</button>
+<button ion-button (click)="cerrar()">Cerrar</button>

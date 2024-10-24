@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true" class="ion-align-items-center">
+  <div class="ion-padding">
+    <ion-img
+      src="../../assets/images/logo-mascotas-10.png"
+      alt="Mascotas"
+    ></ion-img>
+  <div class="ion-padding">
+    
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+      <ion-input 
+        formControlName="email" 
+        label="Email" 
+        helperText="Ingrese un Email"
+        errorText="El email no es válido"
+        labelPlacement="floating"
+        placeholder="perez@gmail.com"
+        ></ion-input>
+  
+        <ion-input 
+        formControlName="password" 
+        label="Contraseña" 
+        helperText="Ingrese una contraseña"
+        errorText="La contraseña no es válida"
+        labelPlacement="floating">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+  <div class="ion-padding">
+    <ion-button [disabled]="!loginForm.valid" color="tertiary" type="submit" shape="round" strong="true" size="default"expand="block"> Iniciar sesión </ion-button>
+  </div>
+</form>
+  </div>
+  <div class="ion-padding">
+<ion-text>¿No tienes cuenta?</ion-text>
+  <div class="ion-padding">
+    <ion-button routerLink="/register-form" shape="round" size="default" strong="true" expand="block">Registrar</ion-button>
+  </div>
+</div>
+</div>
+</ion-content>                             
